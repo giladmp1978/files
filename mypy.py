@@ -1,5 +1,5 @@
 import time
-for i in range(1,18):
+for i in range(1,6):
     text = ("python say Hi for the " + str(i) + " time")
     file = open("/tmp/result",'a')
     file.write(text + "\n")
