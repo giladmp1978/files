@@ -1,5 +1,6 @@
 #! /bin/bash
 echo "#! /bin/bash" > /tmp/newscrip.sh
+echo "printenv >> /tmp/scriptout.txt"
 echo "for i in {1..100}" >> /tmp/newscrip.sh
 echo "do" >> /tmp/newscrip.sh
 echo "echo \"printing from new script for the \$i time \" >> /tmp/scriptout.txt" >> /tmp/newscrip.sh
