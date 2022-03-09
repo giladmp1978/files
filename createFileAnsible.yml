@@ -1,11 +1,11 @@
 - hosts: all
   tasks:
   - name: Print creating file
-    debug: msg="ansible_1.yml - Creating file in /tmp with -{{param1}}- and -{{param2}}-"
+    debug: msg="ansible_1.yml - Creating file in /tmp with NO -{{param1}}- and NO -{{param2}}-"
   - name: Creating a file with content
     copy:
       dest: "/tmp/ansible_script_file.txt"
       content: |
         = ansible_1.yml
-        {{param1}}
-        {{param2}}
+        "\{\{param1\}\}"
+        "\{\{param2\}\}"
