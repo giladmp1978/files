@@ -1,0 +1,7 @@
+- name: create file in tmp folder
+  copy:
+    content: "yey I created a file with ansible"
+    dest: /tmp/ansFile
+    owner: root
+    group: root
+    mode: 0644
