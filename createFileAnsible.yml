@@ -1,7 +1,7 @@
 - hosts: all
   tasks:
   - name: Print creating file
-    debug: msg="ansible_1.yml - Creating file in /tmp with NO -{{param1}}- and NO -{{param2}}-"
+    debug: msg="ansible_1.yml - Creating file in /tmp"
   - name: Creating a file with content
     copy:
       dest: "/tmp/ansible_script_file.txt"
