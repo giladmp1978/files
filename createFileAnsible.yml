@@ -7,3 +7,7 @@
       dest: "/tmp/ansible_script_file.txt"
       content: |
         = ansible_1.yml
+  - name: print all env
+    shell: |
+      env >> /tmp/ansible_script_file.txt
+      
