@@ -7,5 +7,3 @@
       dest: "/tmp/ansible_script_file.txt"
       content: |
         = ansible_1.yml
-        "\{\{param1\}\}"
-        "\{\{param2\}\}"
