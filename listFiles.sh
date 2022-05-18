@@ -1,5 +1,5 @@
 #! /bin/bash
-echo "this is the correct file"
+echo "this is the correct file "
 cd /
 pwd
 ls -la
