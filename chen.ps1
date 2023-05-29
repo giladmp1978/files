@@ -12,4 +12,5 @@ $StringSet = $StringSet -replace " ",""
 Write-Host $StringSet
 
 Rename-Computer -NewName  $StringSet
+Invoke-RDUserLogoff -ConnectionBroker "localhost"
 Restart-Computer
