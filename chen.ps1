@@ -12,5 +12,10 @@ $StringSet = $StringSet -replace " ",""
 Write-Host $StringSet
 
 Rename-Computer -NewName  $StringSet
-Invoke-RDUserLogoff -ConnectionBroker "localhost"
+
+$sessionIds = (query session | Select-Object -Skip 1 | ForEach-Object { ($_ -split '\s+')[2] }).Trim()
+foreach ($sessionId in $sessionIds) {
+    logoff $sessionId
+}
+
 Restart-Computer
