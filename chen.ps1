@@ -13,4 +13,4 @@ Write-Host $StringSet
 
 Rename-Computer -NewName  $StringSet
 
-Restart-Computer -Force
+echo "need to restart the VM"
