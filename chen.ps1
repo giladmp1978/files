@@ -13,9 +13,4 @@ Write-Host $StringSet
 
 Rename-Computer -NewName  $StringSet
 
-$sessionIds = (query session | Select-Object -Skip 1 | ForEach-Object { ($_ -split '\s+')[2] }).Trim()
-foreach ($sessionId in $sessionIds) {
-    logoff $sessionId
-}
-
-Restart-Computer
+Restart-Computer -Force
