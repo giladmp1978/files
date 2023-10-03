@@ -1,14 +1,23 @@
 - hosts: all
   tasks:
-  - name: Print creating file
-    debug: msg="ansible_1.yml - Creating file in /tmp"
-  - name: Creating a file with content
-    copy:
-      dest: "/tmp/ansible_script_file.txt"
-      content: |
-        = ansible_1.yml
-        {{ para }}
-  - name: print all env
-    shell: |
-      env >> /tmp/ansible_script_file.txt
+    - name: Print creating file
+      debug:
+        msg: "ansible_1.yml - Creating file in /tmp"
+
+    - name: Creating a file with content
+      copy:
+        dest: "/tmp/ansible_script_file.txt"
+        content: |
+          = ansible_1.yml
+          {{ para }}
+
+    - name: Print all environment variables
+      command: env
+      register: env_output
+
+    - name: Append environment variables to the file
+      copy:
+        dest: "/tmp/ansible_script_file.txt"
+        content: "{{ env_output.stdout }}"
+      when: env_output.stdout is defined
       
