@@ -1,7 +1,9 @@
 #! /bin/bash
 echo "this is the correct file "
 echo "going down"
+date
 sleep 4
+date
 echo "Im back"
 cd /
 pwd
