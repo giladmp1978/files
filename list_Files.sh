@@ -15,3 +15,7 @@ echo "*******************************************"
 echo "printing all environment variables"
 echo "*******************************************"
 printenv
+echo "*******************************************"
+echo "printing all variables with 'set' command"
+echo "*******************************************"
+set
